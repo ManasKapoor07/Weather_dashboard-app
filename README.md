@@ -59,14 +59,23 @@ npm run dev
 
 🧠 Approach
 
-1.📡 React Query was used to efficiently fetch, cache, and manage weather API data with automatic re-fetching and error handling.
+1.📡 Data Fetching via React Query
+  1.Used React Query for efficient data fetching, caching, and background refetching of:
+    a.Current weather data.
+    b.5-day forecast.
 
-2.🌍 React Context API was used to globally share weather state across components in a scalable and clean way.
+2.🌍 Global State Management using Context API
+  1.Created a WeatherContext to store and share weather data across components.
+  2.This avoids prop drilling and centralizes data fetching and caching logic.
 
-3.🕒 Accurate local time was computed using Unix timestamps combined with the provided timezone offset from the API.
+3.🕒 Timezone-Aware Time Handling
+  1.Implemented Unix + timezone offset logic to accurately convert timestamps (e.g., sunrise, sunset, forecast times) to local time.
 
-4.🎨 Tailwind CSS enabled a fully responsive and modern layout without writing any custom CSS.
+4.🎨 Responsive UI with Tailwind CSS
+  1.Leveraged Tailwind CSS utility classes to design a clean, mobile-first layout without writing custom CSS.
+  2.Created responsive grid for forecast and card-style metrics.
 
-5.🧩 Component-based architecture helped keep the UI modular, maintainable, and easy to extend.
+5.🧩 Component-Based Architecture
+  1.Split UI into functional components: WeatherDisplay, ForecastGrid, LocationSearch, and WeatherContext.
+  2.This promotes reusability and separation of concerns for maintainable code.
 
-6.📆 5-day forecast was implemented by filtering the forecast data to retrieve one data point per day (e.g., at 12:00 PM), giving a clean and concise daily overview.

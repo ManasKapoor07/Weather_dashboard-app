@@ -1,12 +1,72 @@
-# React + Vite
+A modern, responsive weather dashboard built with React, Vite, and Tailwind CSS. This application displays current weather data, including temperature, humidity, wind speed, pressure, sunrise/sunset, and a 5-day forecast. It also features real-time local time and date based on the weather location.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [Live Demo](https://tangerine-youtiao-d6677d.netlify.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 🧰 Tech Stack
+
+- **React** (via Vite) – Component-based UI
+- **React Query** - To fetch data
+- **Tailwind CSS** – Utility-first styling
+- **OpenWeatherMap API** – Real-time weather and forecast data
+- **React Context API** – Global state management
+- **React Icons** – Weather and UI icons
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/Weather_dashboard-app.git
+cd Weather_dashboard-app
+
+2. Install dependencies
+npm install
+
+3. Add OpenWeatherMap API key
+Create a .env file in the project root and add: 
+VITE_WEATHER_API_KEY=your_openweather_api_key
+
+🔐 Note: You can obtain a free API key from https://openweathermap.org/api
+4. Run the development server
+npm run dev
+
+
+✨ Features
+1.🌍 Location-based weather with city and country
+
+2.🕒 Real-time local time and date handling using timezone offset
+
+3.🌡️ Temperature unit toggle (Celsius ↔ Fahrenheit)
+
+4.📊 Weather metrics: feels like, humidity, wind, pressure
+
+5.🌅 Sunrise and 🌇 Sunset display
+
+6.📅 Responsive 5-day weather forecast
+
+7.🧑‍💻 Clean UI with responsive design (mobile + desktop)
+
+
+
+🧠 Approach
+
+1.📡 React Query was used to efficiently fetch, cache, and manage weather API data with automatic re-fetching and error handling.
+
+2.🌍 React Context API was used to globally share weather state across components in a scalable and clean way.
+
+3.🕒 Accurate local time was computed using Unix timestamps combined with the provided timezone offset from the API.
+
+4.🎨 Tailwind CSS enabled a fully responsive and modern layout without writing any custom CSS.
+
+5.🧩 Component-based architecture helped keep the UI modular, maintainable, and easy to extend.
+
+6.📆 5-day forecast was implemented by filtering the forecast data to retrieve one data point per day (e.g., at 12:00 PM), giving a clean and concise daily overview.
